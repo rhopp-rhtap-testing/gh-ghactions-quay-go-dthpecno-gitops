@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: gh-ghactions-quay-go-dthpecno 
+  janus-idp.io/tekton: gh-ghactions-quay-go-dthpecno
+  backstage.io/kubernetes-id: gh-ghactions-quay-go-dthpecno
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: gh-ghactions-quay-go-dthpecno
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
